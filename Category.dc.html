@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<title>Ourr Home – Refrigerators</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;color:#0F1B33;background:#fff;-webkit-font-smoothing:antialiased;line-height:1.45}
+*{box-sizing:border-box}
+a{color:#1E4DB7;text-decoration:none}a:hover{color:#163A8C;text-decoration:underline}
+img{display:block;max-width:100%}
+button,input,select{font-family:inherit;font-size:16px}
+:focus-visible{outline:3px solid #F5A524;outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:12px;font-weight:700;font-size:17px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:background .15s,box-shadow .15s,transform .15s,color .15s}
+.btn:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 8px 18px rgba(15,27,51,.18)}
+.btn-red{background:#C8102E;color:#fff}.btn-red:hover{background:#A50D25;color:#fff}
+.btn-blue{background:#1E4DB7;color:#fff}.btn-blue:hover{background:#163A8C;color:#fff}
+.btn-ghost{background:#fff;color:#1E4DB7;border-color:#1E4DB7}.btn-ghost:hover{background:#EEF3FD;color:#163A8C}
+.card{background:#fff;border:1px solid #D9DEE6;border-radius:16px;transition:box-shadow .18s,transform .18s,border-color .18s}
+.card:hover{box-shadow:0 14px 30px rgba(15,27,51,.14);transform:translateY(-3px);border-color:#B3C0D6}
+.util{color:#D6E0F7;font-size:14px;min-height:40px;display:inline-flex;align-items:center}.util:hover{color:#fff}
+.navl{color:#fff;font-weight:600;font-size:16px;padding:0 16px;min-height:52px;display:flex;align-items:center;white-space:nowrap;transition:background .15s}
+.navl:hover{background:rgba(255,255,255,.16);color:#fff;text-decoration:none}
+.pill{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 14px;border:1.5px solid #D9DEE6;border-radius:12px;color:#0F1B33;background:#fff;transition:border-color .15s,background .15s}
+.pill:hover{border-color:#1E4DB7;background:#EEF3FD;color:#0F1B33;text-decoration:none}
+.sbtn{border:0;background:#1E4DB7;color:#fff;width:56px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s}.sbtn:hover{background:#163A8C}
+.field{width:100%;min-height:48px;padding:0 14px;border:1.5px solid #8A94A6;border-radius:10px;background:#fff;color:#0F1B33}
+.field:hover{border-color:#1E4DB7}
+.foot a{color:#D6E0F7;display:inline-flex;align-items:center;min-height:32px}.foot a:hover{color:#fff}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.frow{display:flex;align-items:center;gap:12px;min-height:44px;cursor:pointer;font-size:16px;border-radius:8px;padding:0 6px}
+.frow:hover{background:#EEF3FD}
+.ptitle{color:#0F1B33;font-weight:700;font-size:18px;line-height:1.3}.ptitle:hover{color:#1E4DB7;text-decoration:underline}
+.link-btn{background:none;border:0;color:#1E4DB7;font-weight:700;min-height:44px;padding:0 6px;cursor:pointer;text-decoration:underline}
+.link-btn:hover{color:#163A8C}
+</style>
+</helmet>
+
+<div id="page">
+<div style="background:#0F1B33;color:#fff;font-size:14px">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;min-height:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 24px">
+    <span>Free delivery over $999 across the GTA and Hamilton area</span>
+    <div style="display:flex;flex-wrap:wrap;gap:0 24px">
+      <a class="util" href="Stores.dc.html">Find a store</a>
+      <a class="util" href="#financing">Financing</a>
+      <a class="util" href="#help">Help</a>
+    </div>
+  </div>
+</div>
+
+<header style="position:sticky;top:0;z-index:60;background:#fff;box-shadow:0 2px 14px rgba(15,27,51,.10)">
+  <div style="max-width:1280px;margin:0 auto;padding:12px 32px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px">
+    <a href="Main.dc.html" aria-label="Ourr Home and Appliances, home" style="display:flex;align-items:center;gap:12px;flex:0 0 auto;color:#0F1B33;text-decoration:none">
+      <svg width="46" height="46" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="11" fill="#C8102E"/><path d="M11 22 L22 12 L33 22 V33 H11 Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><rect x="19" y="24" width="6" height="9" fill="#fff"/></svg>
+      <span style="display:flex;flex-direction:column;line-height:1"><span style="font-size:28px;font-weight:800;letter-spacing:-.01em">Ourr</span><span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#556070;margin-top:3px">HOME &amp; APPLIANCES</span></span>
+    </a>
+    <div style="flex:1 1 320px;max-width:620px;display:flex;border:2px solid #1E4DB7;border-radius:12px;overflow:hidden;background:#fff">
+      <label class="sr" for="q">Search appliances</label>
+      <input id="q" type="search" placeholder="Search by model, brand or keyword" style="flex:1;min-width:0;border:0;min-height:48px;padding:0 16px;outline-offset:-3px">
+      <button class="sbtn" type="button" aria-label="Search"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg></button>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-left:auto">
+      <a class="pill" href="Stores.dc.html" aria-label="My store: Etobicoke. Change store">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        <span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:12px;color:#556070">My store:</span><span style="font-weight:700;font-size:16px">Etobicoke</span></span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#556070" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+      <a class="pill" href="#account" style="font-weight:600">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F1B33" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/></svg>
+        Sign in
+      </a>
+      <a class="pill" href="Cart.dc.html" aria-label="Cart, empty" style="font-weight:700">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2.5 3.5h3l2.4 11.5h10.2l2-8.5H6.4"/></svg>
+        Cart
+      </a>
+    </div>
+  </div>
+  <nav aria-label="Main" style="background:#1E4DB7">
+    <div style="max-width:1280px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;align-items:center">
+      <a class="navl" href="Category.dc.html" aria-current="page" style="box-shadow:inset 0 -4px 0 #fff">Refrigerators</a>
+      <a class="navl" href="#ranges">Ranges</a>
+      <a class="navl" href="#dishwashers">Dishwashers</a>
+      <a class="navl" href="#laundry">Washers &amp; Dryers</a>
+      <a class="navl" href="#ovens">Wall Ovens</a>
+      <a class="navl" href="#microwaves">Microwaves</a>
+      <a class="navl" href="Category.dc.html" style="gap:8px">Open Box &amp; Clearance <span style="background:#C8102E;color:#fff;font-size:12px;font-weight:800;padding:2px 8px;border-radius:999px">SALE</span></a>
+      <a class="navl" href="Main.dc.html#brands" style="margin-left:auto">Brands</a>
+      <a class="navl" href="Stores.dc.html">Stores</a>
+    </div>
+  </nav>
+</header>
+
+<main style="max-width:1280px;margin:0 auto;padding:20px 32px 72px">
+  <nav aria-label="Breadcrumb" style="font-size:15px;color:#556070;display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-height:44px">
+    <a href="Main.dc.html">Home</a><span aria-hidden="true">/</span><span style="color:#0F1B33;font-weight:600">Refrigerators</span>
+  </nav>
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 24px;margin:8px 0 28px">
+    <div>
+      <h1 style="margin:0;font-size:42px;line-height:1.1;font-weight:800;letter-spacing:-.02em">Refrigerators</h1>
+      <p style="margin:6px 0 0;font-size:18px;color:#334155">Top-freezer, side-by-side and French door models from brands you know.</p>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start">
+    <!-- FILTERS -->
+    <aside aria-label="Filters" style="flex:0 0 280px;width:280px;max-width:100%;display:flex;flex-direction:column;gap:6px">
+      <div style="display:flex;align-items:center;justify-content:space-between;min-height:44px">
+        <h2 style="margin:0;font-size:20px;font-weight:800">Filters</h2>
+        <button class="link-btn" type="button" onClick="{{ clearAll }}">Clear all</button>
+      </div>
+
+      <label class="frow" style="border:1.5px solid #D9DEE6;border-radius:12px;padding:0 14px;min-height:56px;background:#F4F6F9;justify-content:space-between">
+        <span style="display:flex;flex-direction:column;line-height:1.2"><strong>In stock at my store</strong><span style="font-size:13px;color:#556070">Etobicoke</span></span>
+        <input type="checkbox" checked="{{ mine }}" onChange="{{ toggleMine }}" style="width:22px;height:22px;accent-color:#1E4DB7">
+      </label>
+
+      <fieldset style="border:0;border-top:1px solid #D9DEE6;margin:10px 0 0;padding:14px 0 6px">
+        <legend style="font-weight:800;font-size:17px;padding:0 0 4px;float:left;width:100%">Type</legend>
+        <div style="clear:both"></div>
+        <sc-for list="{{ typeOpts }}" as="o" hint-placeholder-count="3">
+          <label class="frow"><input type="checkbox" checked="{{ o.on }}" onChange="{{ o.toggle }}" style="width:22px;height:22px;accent-color:#1E4DB7"><span style="flex:1">{{ o.label }}</span><span style="color:#556070;font-size:14px">{{ o.count }}</span></label>
+        </sc-for>
+      </fieldset>
+
+      <fieldset style="border:0;border-top:1px solid #D9DEE6;margin:0;padding:14px 0 6px">
+        <legend style="font-weight:800;font-size:17px;padding:0 0 4px;float:left;width:100%">Brand</legend>
+        <div style="clear:both"></div>
+        <sc-for list="{{ brandOpts }}" as="o" hint-placeholder-count="9">
+          <label class="frow"><input type="checkbox" checked="{{ o.on }}" onChange="{{ o.toggle }}" style="width:22px;height:22px;accent-color:#1E4DB7"><span style="flex:1">{{ o.label }}</span><span style="color:#556070;font-size:14px">{{ o.count }}</span></label>
+        </sc-for>
+      </fieldset>
+
+      <fieldset style="border:0;border-top:1px solid #D9DEE6;margin:0;padding:14px 0 6px">
+        <legend style="font-weight:800;font-size:17px;padding:0 0 4px;float:left;width:100%">Width</legend>
+        <div style="clear:both"></div>
+        <sc-for list="{{ widthOpts }}" as="o" hint-placeholder-count="3">
+          <label class="frow"><input type="checkbox" checked="{{ o.on }}" onChange="{{ o.toggle }}" style="width:22px;height:22px;accent-color:#1E4DB7"><span style="flex:1">{{ o.label }}</span><span style="color:#556070;font-size:14px">{{ o.count }}</span></label>
+        </sc-for>
+      </fieldset>
+
+      <fieldset style="border:0;border-top:1px solid #D9DEE6;margin:0;padding:14px 0 6px">
+        <legend style="font-weight:800;font-size:17px;padding:0 0 4px;float:left;width:100%">Price</legend>
+        <div style="clear:both"></div>
+        <sc-for list="{{ priceOpts }}" as="o" hint-placeholder-count="4">
+          <label class="frow"><input type="checkbox" checked="{{ o.on }}" onChange="{{ o.toggle }}" style="width:22px;height:22px;accent-color:#1E4DB7"><span style="flex:1">{{ o.label }}</span><span style="color:#556070;font-size:14px">{{ o.count }}</span></label>
+        </sc-for>
+      </fieldset>
+
+      <fieldset style="border:0;border-top:1px solid #D9DEE6;margin:0;padding:14px 0 6px">
+        <legend style="font-weight:800;font-size:17px;padding:0 0 4px;float:left;width:100%">Colour / finish</legend>
+        <div style="clear:both"></div>
+        <sc-for list="{{ colorOpts }}" as="o" hint-placeholder-count="3">
+          <label class="frow"><input type="checkbox" checked="{{ o.on }}" onChange="{{ o.toggle }}" style="width:22px;height:22px;accent-color:#1E4DB7"><span style="width:22px;height:22px;border-radius:50%;border:1.5px solid #8A94A6;background:{{ o.hex }};flex:0 0 22px" aria-hidden="true"></span><span style="flex:1">{{ o.label }}</span><span style="color:#556070;font-size:14px">{{ o.count }}</span></label>
+        </sc-for>
+      </fieldset>
+    </aside>
+
+    <!-- RESULTS -->
+    <section aria-label="Products" style="flex:1 1 620px;min-width:0">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #D9DEE6">
+        <p style="margin:0;font-size:17px;color:#334155" role="status"><strong style="color:#0F1B33">{{ countText }}</strong></p>
+        <div style="display:flex;align-items:center;gap:10px">
+          <label for="sort" style="font-weight:600">Sort by</label>
+          <select id="sort" class="field" value="{{ sort }}" onChange="{{ setSort }}" style="width:auto;min-width:220px;font-weight:600">
+            <option value="featured">Featured</option>
+            <option value="asc">Price: low to high</option>
+            <option value="desc">Price: high to low</option>
+            <option value="save">Biggest savings</option>
+          </select>
+        </div>
+      </div>
+
+      <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+        <div style="border:1.5px dashed #8A94A6;border-radius:16px;padding:48px 24px;text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center">
+          <strong style="font-size:22px">No refrigerators match those filters</strong>
+          <span style="color:#334155">Try removing a filter or two.</span>
+          <button class="btn btn-blue" type="button" onClick="{{ clearAll }}">Clear all filters</button>
+        </div>
+      </sc-if>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(270px,100%),1fr));gap:24px">
+        <sc-for list="{{ cards }}" as="p" hint-placeholder-count="6">
+          <article class="card" style="display:flex;flex-direction:column;overflow:hidden;position:relative">
+            <div style="position:relative;background:#fff;height:290px;display:flex;align-items:center;justify-content:center;padding:44px 16px 16px;border-bottom:1px solid #E8EBF0">
+              <label style="position:absolute;top:10px;left:10px;display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px 0 10px;background:#fff;border:1.5px solid #8A94A6;border-radius:999px;font-weight:600;font-size:15px;cursor:pointer">
+                <input type="checkbox" checked="{{ p.cmpOn }}" onChange="{{ p.cmpToggle }}" style="width:20px;height:20px;accent-color:#1E4DB7">Compare
+              </label>
+              <sc-if value="{{ p.hasWas }}" hint-placeholder-val="{{ true }}">
+                <span style="position:absolute;top:14px;right:12px;background:#C8102E;color:#fff;font-weight:800;font-size:14px;padding:5px 12px;border-radius:999px">Save {{ p.saveText }}</span>
+              </sc-if>
+              <a href="Product.dc.html" aria-label="{{ p.fullName }}" style="display:block;height:100%"><img src="{{ p.img }}" alt="{{ p.alt }}" style="height:100%;width:auto"></a>
+            </div>
+            <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:6px;flex:1">
+              <span style="font-size:13px;font-weight:800;letter-spacing:.08em;color:#556070;text-transform:uppercase">{{ p.brand }}<sc-if value="{{ p.hasTag }}" hint-placeholder-val="{{ false }}"> · <span style="color:#A50D25">{{ p.tag }}</span></sc-if></span>
+              <a class="ptitle" href="Product.dc.html">{{ p.name }}</a>
+              <span style="font-size:14px;color:#556070">Model {{ p.model }}</span>
+              <span style="font-size:14px;color:#334155">{{ p.specs }}</span>
+              <div style="display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin-top:8px">
+                <span style="font-size:30px;font-weight:800;color:#C8102E;line-height:1.1">{{ p.priceText }}</span>
+                <sc-if value="{{ p.hasWas }}" hint-placeholder-val="{{ true }}"><span style="font-size:15px;color:#556070;text-decoration:line-through">{{ p.wasText }}</span></sc-if>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin:6px 0 14px;font-weight:600;font-size:15px;color:#0F1B33">
+                <sc-if value="{{ p.stockGood }}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="width:10px;height:10px;border-radius:50%;background:#0A6B3B;flex:0 0 10px"></span></sc-if>
+                <sc-if value="{{ p.stockWarn }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="width:10px;height:10px;background:#B45F06;flex:0 0 10px;transform:rotate(45deg)"></span></sc-if>
+                {{ p.stockLabel }}
+              </div>
+              <a class="btn btn-ghost" href="Product.dc.html" style="margin-top:auto;width:100%;min-height:48px">View details</a>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+  </div>
+</main>
+
+<sc-if value="{{ showBar }}" hint-placeholder-val="{{ true }}">
+<div style="position:sticky;bottom:0;z-index:50;background:#fff;border-top:1px solid #D9DEE6;box-shadow:0 -10px 28px rgba(15,27,51,.14)">
+  <div style="max-width:1280px;margin:0 auto;padding:12px 32px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px">
+    <strong style="font-size:18px">Compare ({{ cmpCount }} of 3)</strong>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;flex:1 1 300px">
+      <sc-for list="{{ cmpItems }}" as="c" hint-placeholder-count="3">
+        <span style="display:flex;align-items:center;gap:10px;border:1.5px solid #D9DEE6;border-radius:12px;padding:4px 14px 4px 8px;min-height:56px;background:#F4F6F9">
+          <img src="{{ c.img }}" alt="" style="height:44px;width:auto">
+          <span style="font-size:14px;line-height:1.25;font-weight:600">{{ c.label }}</span>
+        </span>
+      </sc-for>
+    </div>
+    <span style="font-size:14px;color:#556070">{{ cmpHint }}</span>
+    <button class="link-btn" type="button" onClick="{{ clearCmp }}">Clear</button>
+    <a class="btn btn-red" href="Compare.dc.html">Compare now</a>
+  </div>
+</div>
+</sc-if>
+
+<footer class="foot" style="background:#0F1B33;color:#D6E0F7">
+  <div style="max-width:1280px;margin:0 auto;padding:56px 32px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:32px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="display:flex;align-items:center;gap:12px;color:#fff">
+        <svg width="40" height="40" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="11" fill="#C8102E"/><path d="M11 22 L22 12 L33 22 V33 H11 Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><rect x="19" y="24" width="6" height="9" fill="#fff"/></svg>
+        <strong style="font-size:22px">Ourr Home &amp; Appliances</strong>
+      </span>
+      <span style="font-size:16px;color:#fff;font-weight:600">Ourr Home in Every Home</span>
+      <span style="font-size:15px">Family-owned appliance retailer in Ontario.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <strong style="color:#fff;margin-bottom:8px">Shop</strong>
+      <a href="Category.dc.html">Refrigerators</a><a href="#ranges">Ranges</a><a href="#dishwashers">Dishwashers</a><a href="#laundry">Washers &amp; Dryers</a><a href="#ovens">Wall Ovens</a><a href="#microwaves">Microwaves</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <strong style="color:#fff;margin-bottom:8px">Customer care</strong>
+      <a href="#delivery">Delivery &amp; haul-away</a><a href="#financing">Financing</a><a href="#returns">Returns</a><a id="help" href="#contact">Contact us</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <strong style="color:#fff;margin-bottom:8px">Our stores</strong>
+      <a href="Stores.dc.html">Etobicoke</a><a href="Stores.dc.html">Vaughan</a><a href="Stores.dc.html">Oakville</a><a href="Stores.dc.html">Stoney Creek</a><a href="Stores.dc.html">Brampton (Heritage Rd)</a><a href="Stores.dc.html">Brampton (Clarence St)</a>
+    </div>
+  </div>
+  <div style="border-top:1px solid #2B3B5C">
+    <div style="max-width:1280px;margin:0 auto;padding:20px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;font-size:14px">
+      <span>© 2026 Ourr Home &amp; Appliances. Sample products and prices.</span>
+      <span style="background:#fff;color:#0F1B33;font-weight:800;padding:6px 14px;border-radius:999px">Prototype – concept only</span>
+    </div>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1360,"height":2650}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { types: [], brands: [], widths: [], colors: [], prices: [], mine: false, sort: 'featured', cmp: ['p1', 'p2', 'p3'] };
+  }
+
+  products() {
+    const T = '';
+    return [
+      { id: 'p1', brand: 'Frigidaire', name: '28.5" Top-Freezer Refrigerator', model: 'ARTX2314TW', type: 'top', w: 28.5, finish: 'white', price: 729.99, was: 999.99, cap: '18.3 cu. ft.', store: 'vaughan', tag: 'Clearance', img: T + 'img/fridge-top-white.svg' },
+      { id: 'p2', brand: 'Whirlpool', name: '33" Side-by-Side Refrigerator', model: 'WRS325SDHZ', type: 'side', w: 33, finish: 'stainless', price: 1299.99, was: 1599.99, cap: '25.2 cu. ft.', store: 'mine', tag: 'Clearance', img: T + 'img/fridge-side-ss.svg' },
+      { id: 'p3', brand: 'LG', name: '36" French Door Refrigerator', model: 'LRMVS3006S', type: 'french', w: 36, finish: 'stainless', price: 2499.99, was: 2899.99, cap: '30.7 cu. ft.', store: 'mine', tag: '', img: T + 'img/fridge-fd-ss.svg' },
+      { id: 'p4', brand: 'Samsung', name: '36" French Door Refrigerator', model: 'RF28T5001SR', type: 'french', w: 36, finish: 'stainless', price: 1699.99, was: 2199.99, cap: '28.0 cu. ft.', store: 'vaughan', tag: 'Open box', img: T + 'img/fridge-fd-ss.svg' },
+      { id: 'p5', brand: 'GE', name: '28" Top-Freezer Refrigerator', model: 'GTE18GTNRWW', type: 'top', w: 28, finish: 'white', price: 749.99, was: 0, cap: '17.5 cu. ft.', store: 'mine', tag: '', img: T + 'img/fridge-top-white.svg' },
+      { id: 'p6', brand: 'Maytag', name: '30" Top-Freezer Refrigerator', model: 'MRT311FFFH', type: 'top', w: 30, finish: 'stainless', price: 1049.99, was: 1249.99, cap: '20.5 cu. ft.', store: 'mine', tag: 'Open box', img: T + 'img/fridge-top-ss.svg' },
+      { id: 'p7', brand: 'Bosch', name: '36" French Door Refrigerator', model: 'B36CT80SNS', type: 'french', w: 36, finish: 'stainless', price: 4699.99, was: 5199.99, cap: '20.8 cu. ft.', store: 'ships', tag: '', img: T + 'img/fridge-fd-ss.svg' },
+      { id: 'p8', brand: 'Café', name: '36" French Door Refrigerator', model: 'CVE28DP4NW2', type: 'french', w: 36, finish: 'matte', price: 3999.99, was: 4399.99, cap: '27.8 cu. ft.', store: 'vaughan', tag: '', img: T + 'img/fridge-fd-mw.svg' },
+      { id: 'p9', brand: 'Hisense', name: '24" Top-Freezer Refrigerator', model: 'RT12N6AWE', type: 'top', w: 24, finish: 'white', price: 599.99, was: 699.99, cap: '11.6 cu. ft.', store: 'mine', tag: '', img: T + 'img/fridge-top-white.svg' }
+    ];
+  }
+
+  renderVals() {
+    const s = this.state;
+    const money = (n) => '$' + n.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const all = this.products();
+    const wOf = (p) => (p.w < 30 ? 'u30' : p.w < 34 ? 'mid' : 'lg');
+    const pOf = (p) => (p.price < 800 ? 'a' : p.price < 1500 ? 'b' : p.price < 3000 ? 'c' : 'd');
+    const finishLabel = { white: 'White', stainless: 'Stainless steel', matte: 'Matte white' };
+    const typeLabel = { top: 'Top freezer', side: 'Side-by-side', french: 'French door' };
+
+    const tog = (key, val) => () => {
+      const cur = this.state[key];
+      this.setState({ [key]: cur.includes(val) ? cur.filter((x) => x !== val) : cur.concat(val) });
+    };
+    const opts = (key, defs, fn) => defs.map((o) => ({
+      label: o.label, hex: o.hex || '', count: all.filter((p) => fn(p) === o.v).length,
+      on: s[key].includes(o.v), toggle: tog(key, o.v)
+    }));
+
+    let list = all.filter((p) =>
+      (!s.types.length || s.types.includes(p.type)) &&
+      (!s.brands.length || s.brands.includes(p.brand)) &&
+      (!s.widths.length || s.widths.includes(wOf(p))) &&
+      (!s.colors.length || s.colors.includes(p.finish)) &&
+      (!s.prices.length || s.prices.includes(pOf(p))) &&
+      (!s.mine || p.store === 'mine'));
+    const saveOf = (p) => (p.was ? p.was - p.price : 0);
+    if (s.sort === 'asc') list = list.slice().sort((a, b) => a.price - b.price);
+    if (s.sort === 'desc') list = list.slice().sort((a, b) => b.price - a.price);
+    if (s.sort === 'save') list = list.slice().sort((a, b) => saveOf(b) - saveOf(a));
+
+    const cmpToggle = (id) => () => {
+      const cur = this.state.cmp;
+      if (cur.includes(id)) this.setState({ cmp: cur.filter((x) => x !== id) });
+      else if (cur.length < 3) this.setState({ cmp: cur.concat(id) });
+    };
+
+    const cards = list.map((p) => ({
+      id: p.id, brand: p.brand, name: p.name, model: p.model, img: p.img,
+      fullName: p.brand + ' ' + p.name,
+      alt: p.brand + ' ' + p.name + ', ' + finishLabel[p.finish].toLowerCase(),
+      hasTag: !!p.tag, tag: p.tag,
+      specs: p.cap + ' · ' + finishLabel[p.finish] + ' · ' + p.w + '" wide',
+      priceText: money(p.price), hasWas: !!p.was, wasText: p.was ? money(p.was) : '',
+      saveText: p.was ? '$' + Math.round(p.was - p.price) : '',
+      stockGood: p.store !== 'ships', stockWarn: p.store === 'ships',
+      stockLabel: p.store === 'mine' ? 'In stock at Etobicoke' : p.store === 'vaughan' ? 'In stock at Vaughan' : 'Special order: 7 to 10 days',
+      cmpOn: s.cmp.includes(p.id), cmpToggle: cmpToggle(p.id)
+    }));
+
+    const cmpItems = s.cmp.map((id) => all.find((p) => p.id === id)).filter(Boolean).map((p) => ({ img: p.img, label: p.brand + ' ' + p.model }));
+
+    return {
+      mine: s.mine, sort: s.sort,
+      toggleMine: () => this.setState({ mine: !this.state.mine }),
+      setSort: (e) => this.setState({ sort: e.target.value }),
+      clearAll: () => this.setState({ types: [], brands: [], widths: [], colors: [], prices: [], mine: false }),
+      typeOpts: opts('types', [{ v: 'french', label: 'French door' }, { v: 'top', label: 'Top freezer' }, { v: 'side', label: 'Side-by-side' }], (p) => p.type),
+      brandOpts: opts('brands', ['Frigidaire', 'Whirlpool', 'LG', 'Samsung', 'GE', 'Maytag', 'Bosch', 'Café', 'Hisense'].map((b) => ({ v: b, label: b })), (p) => p.brand),
+      widthOpts: opts('widths', [{ v: 'u30', label: 'Under 30"' }, { v: 'mid', label: '30" to 33"' }, { v: 'lg', label: '34" to 36"' }], wOf),
+      priceOpts: opts('prices', [{ v: 'a', label: 'Under $800' }, { v: 'b', label: '$800 to $1,500' }, { v: 'c', label: '$1,500 to $3,000' }, { v: 'd', label: 'Over $3,000' }], pOf),
+      colorOpts: opts('colors', [{ v: 'white', label: 'White', hex: '#FFFFFF' }, { v: 'stainless', label: 'Stainless steel', hex: '#BDC4CE' }, { v: 'matte', label: 'Matte white', hex: '#EDE9DF' }], (p) => p.finish),
+      cards, noResults: cards.length === 0,
+      countText: cards.length + (cards.length === 1 ? ' refrigerator' : ' refrigerators'),
+      showBar: s.cmp.length > 0, cmpCount: s.cmp.length, cmpItems,
+      cmpHint: s.cmp.length < 2 ? 'Pick at least 2 to compare' : s.cmp.length === 3 ? 'Maximum of 3 reached' : '',
+      clearCmp: () => this.setState({ cmp: [] })
+    };
+  }
+}
+</script>
+</body>
+</html>

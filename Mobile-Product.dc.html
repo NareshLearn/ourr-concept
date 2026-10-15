@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<title>Ourr Home – Mobile product</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;color:#0F1B33;background:#fff;-webkit-font-smoothing:antialiased;line-height:1.45}
+*{box-sizing:border-box}
+a{color:#1E4DB7;text-decoration:none}a:hover{color:#163A8C;text-decoration:underline}
+img{display:block;max-width:100%}
+button,input,select{font-family:inherit;font-size:16px}
+:focus-visible{outline:3px solid #F5A524;outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 22px;border-radius:12px;font-weight:700;font-size:17px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:background .15s,box-shadow .15s,transform .15s,color .15s}
+.btn:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 8px 18px rgba(15,27,51,.18)}
+.btn-red{background:#C8102E;color:#fff}.btn-red:hover{background:#A50D25;color:#fff}
+.btn-blue{background:#1E4DB7;color:#fff}.btn-blue:hover{background:#163A8C;color:#fff}
+.btn-ghost{background:#fff;color:#1E4DB7;border-color:#1E4DB7}.btn-ghost:hover{background:#EEF3FD;color:#163A8C}
+.card{background:#fff;border:1px solid #D9DEE6;border-radius:16px}
+.ibtn{width:48px;height:48px;border:0;background:transparent;border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#0F1B33}
+.ibtn:hover{background:#EEF3FD;text-decoration:none}
+.field{width:100%;min-height:52px;padding:0 14px;border:1.5px solid #8A94A6;border-radius:10px;background:#fff;color:#0F1B33}
+.foot a{color:#D6E0F7;display:inline-flex;align-items:center;min-height:44px}.foot a:hover{color:#fff}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.opt{display:flex;align-items:center;gap:12px;min-height:64px;padding:10px 12px;border-radius:12px;cursor:pointer;transition:background .15s,border-color .15s}
+.opt:hover{background:#EEF3FD}
+.thumb{width:68px;height:68px;border-radius:12px;background:#fff;padding:5px;cursor:pointer}
+.thumb:hover{border-color:#1E4DB7 !important}
+</style>
+</helmet>
+
+<div id="page" style="max-width:430px;margin:0 auto;background:#fff">
+<header style="position:sticky;top:0;z-index:60;background:#fff;box-shadow:0 2px 12px rgba(15,27,51,.10)">
+  <div style="padding:6px 8px 4px 8px;display:flex;align-items:center;gap:2px">
+    <button class="ibtn" type="button" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F1B33" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a href="Mobile-Home.dc.html" aria-label="Ourr Home and Appliances, home" style="flex:1;display:flex;align-items:center;gap:10px;color:#0F1B33;text-decoration:none;min-height:48px">
+      <svg width="36" height="36" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="11" fill="#C8102E"/><path d="M11 22 L22 12 L33 22 V33 H11 Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><rect x="19" y="24" width="6" height="9" fill="#fff"/></svg>
+      <span style="display:flex;flex-direction:column;line-height:1"><span style="font-size:22px;font-weight:800">Ourr</span><span style="font-size:9px;font-weight:700;letter-spacing:.12em;color:#556070;margin-top:2px">HOME &amp; APPLIANCES</span></span>
+    </a>
+    <a class="ibtn" href="Mobile-Cart.dc.html" aria-label="Cart, empty"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2.5 3.5h3l2.4 11.5h10.2l2-8.5H6.4"/></svg></a>
+  </div>
+  <div style="padding:2px 16px 10px">
+    <div style="display:flex;border:2px solid #1E4DB7;border-radius:12px;overflow:hidden;background:#fff">
+      <label class="sr" for="q">Search appliances</label>
+      <input id="q" type="search" placeholder="Search by model, brand or keyword" style="flex:1;min-width:0;border:0;min-height:46px;padding:0 14px;outline-offset:-3px">
+      <button type="button" aria-label="Search" style="border:0;background:#1E4DB7;width:52px;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg></button>
+    </div>
+  </div>
+  <a href="Stores.dc.html" aria-label="My store: Etobicoke. Change store" style="display:flex;align-items:center;gap:10px;min-height:48px;padding:0 16px;background:#1E4DB7;color:#fff;font-weight:600">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+    <span style="flex:1">My store: <strong>Etobicoke</strong></span>
+    <span style="text-decoration:underline">Change</span>
+  </a>
+</header>
+
+<main style="padding:4px 16px 0">
+  <nav aria-label="Breadcrumb" style="font-size:14px;display:flex;align-items:center;min-height:48px"><a href="Mobile-Home.dc.html" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4DB7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Refrigerators</a></nav>
+
+  <div style="position:relative;background:#F4F6F9;border:1px solid #D9DEE6;border-radius:18px;height:340px;display:flex;align-items:center;justify-content:center;padding:18px">
+    <span style="position:absolute;top:12px;left:12px;background:#C8102E;color:#fff;font-weight:800;font-size:14px;padding:5px 12px;border-radius:999px">Save $270.00</span>
+    <img src="{{ mainSrc }}" alt="{{ mainAlt }}" style="height:100%;width:auto;max-width:100%;object-fit:contain">
+  </div>
+  <div style="display:flex;gap:10px;margin-top:12px" role="group" aria-label="Product images">
+    <sc-for list="{{ thumbs }}" as="t" hint-placeholder-count="3">
+      <button class="thumb" type="button" aria-label="{{ t.label }}" aria-pressed="{{ t.on }}" onClick="{{ t.pick }}" style="border:2.5px solid {{ t.border }}"><img src="{{ t.src }}" alt="" style="height:100%;width:100%;object-fit:contain"></button>
+    </sc-for>
+  </div>
+
+  <div style="margin-top:20px">
+    <span style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#A50D25">CLEARANCE · FRIGIDAIRE</span>
+    <h1 style="margin:4px 0 4px;font-size:28px;line-height:1.15;font-weight:800;letter-spacing:-.015em">Frigidaire 28.5" Top-Freezer Refrigerator</h1>
+    <p style="margin:0;font-size:15px;color:#556070">Model ARTX2314TW · White</p>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-top:14px">
+    <span style="font-size:42px;line-height:1;font-weight:800;color:#C8102E">$729.99</span>
+    <span style="font-size:18px;color:#556070;text-decoration:line-through">$999.99</span>
+    <span style="background:#FDECEF;color:#A50D25;font-weight:800;padding:4px 10px;border-radius:999px;font-size:14px">Save $270.00 (27%)</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:12px;background:#EEF3FD;border-radius:14px;padding:12px 14px;margin-top:14px">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E4DB7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 26px"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg>
+    <span style="line-height:1.35"><strong style="font-size:17px">From {{ monthly }}/month</strong><br><span style="font-size:13px;color:#334155">24 months on approved credit, before tax</span></span>
+  </div>
+
+  <!-- Store -->
+  <section class="card" style="padding:18px 16px;margin-top:20px">
+    <h2 style="margin:0 0 10px;font-size:19px;font-weight:800">Availability</h2>
+    <label for="store" style="font-weight:600;font-size:15px;display:block;margin-bottom:6px">Pickup store</label>
+    <select id="store" class="field" value="{{ store }}" onChange="{{ setStore }}">
+      <option value="vaughan">Vaughan</option>
+      <option value="oakville">Oakville</option>
+      <option value="bramh">Brampton (Heritage Rd)</option>
+      <option value="stoneycreek">Stoney Creek</option>
+      <option value="etobicoke">Etobicoke (my store)</option>
+    </select>
+    <p role="status" style="margin:12px 0 0;display:flex;align-items:center;gap:10px;font-weight:700;color:{{ stockColor }}"><span aria-hidden="true" style="width:10px;height:10px;background:{{ stockColor }};border-radius:{{ stockRadius }};flex:0 0 10px"></span>{{ stockText }}</p>
+  </section>
+
+  <!-- Delivery check -->
+  <section class="card" style="padding:18px 16px;margin-top:14px">
+    <h2 style="margin:0 0 10px;font-size:19px;font-weight:800">Delivery to your home</h2>
+    <label for="postal" style="font-weight:600;font-size:15px;display:block;margin-bottom:6px">Postal code</label>
+    <div style="display:flex;gap:10px">
+      <input id="postal" class="field" type="text" name="postal" value="{{ postal }}" onChange="{{ setPostal }}" placeholder="e.g. M9C 1B8" autocomplete="postal-code" style="text-transform:uppercase;flex:1;min-width:0">
+      <button class="btn btn-blue" type="button" onClick="{{ checkPostal }}" style="padding:0 18px">Check</button>
+    </div>
+    <p role="status" style="margin:12px 0 0;font-weight:600;line-height:1.4;color:{{ postalColor }}">{{ postalMsg }}</p>
+  </section>
+
+  <!-- Add-ons -->
+  <section class="card" style="padding:18px 16px;margin-top:14px">
+    <h2 style="margin:0 0 4px;font-size:19px;font-weight:800">Add services</h2>
+    <p style="margin:0 0 10px;font-size:14px;color:#556070">Free delivery on orders over $999.</p>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <sc-for list="{{ addons }}" as="a" hint-placeholder-count="4">
+        <label class="opt" style="border:2px solid {{ a.border }};background:{{ a.bg }}">
+          <input type="checkbox" checked="{{ a.on }}" onChange="{{ a.toggle }}" style="width:24px;height:24px;accent-color:#1E4DB7;flex:0 0 24px">
+          <span style="flex:1;display:flex;flex-direction:column;line-height:1.3"><strong>{{ a.title }}</strong><span style="font-size:13px;color:#556070">{{ a.desc }}</span></span>
+          <strong>{{ a.priceText }}</strong>
+        </label>
+      </sc-for>
+    </div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid #D9DEE6">
+      <span style="font-weight:600">Total before tax</span>
+      <span style="font-size:28px;font-weight:800">{{ total }}</span>
+    </div>
+  </section>
+
+  <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px">
+    <button class="btn btn-ghost" type="button" onClick="{{ reserve }}" style="width:100%">Reserve for in-store pickup</button>
+    <sc-if value="{{ reserved }}" hint-placeholder-val="{{ false }}">
+      <p role="status" style="margin:0;background:#E7F4EC;color:#0B4F2B;border-radius:12px;padding:12px 14px;font-weight:600;line-height:1.4">Reserved at {{ storeName }} for 48 hours. We will email your confirmation.</p>
+    </sc-if>
+  </div>
+
+  <details class="card" style="margin-top:16px;padding:0 16px">
+    <summary style="min-height:56px;display:flex;align-items:center;font-weight:800;font-size:18px;cursor:pointer">Specifications</summary>
+    <dl style="margin:0 0 12px;display:grid;grid-template-columns:110px 1fr">
+      <sc-for list="{{ specs }}" as="r" hint-placeholder-count="10">
+        <dt style="padding:10px 0;border-top:1px solid #E8EBF0;color:#556070;font-weight:600;font-size:15px">{{ r.k }}</dt>
+        <dd style="margin:0;padding:10px 0;border-top:1px solid #E8EBF0;font-weight:600;font-size:15px">{{ r.v }}</dd>
+      </sc-for>
+    </dl>
+  </details>
+  <p style="margin:12px 0 20px"><a href="Compare.dc.html" style="font-weight:700;min-height:44px;display:inline-flex;align-items:center">Compare with similar refrigerators</a></p>
+</main>
+
+<div style="position:sticky;bottom:0;z-index:50;background:#fff;border-top:1px solid #D9DEE6;box-shadow:0 -8px 22px rgba(15,27,51,.14);padding:10px 16px;display:flex;align-items:center;gap:14px">
+  <div style="line-height:1.15"><div style="font-size:13px;color:#556070">Total before tax</div><div style="font-size:24px;font-weight:800;color:#C8102E">{{ total }}</div></div>
+  <a class="btn btn-red" href="Mobile-Cart.dc.html" style="flex:1">Add to cart</a>
+</div>
+
+<footer class="foot" style="background:#0F1B33;color:#D6E0F7;padding:28px 16px 24px">
+  <span style="display:flex;align-items:center;gap:12px;color:#fff">
+    <svg width="34" height="34" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="11" fill="#C8102E"/><path d="M11 22 L22 12 L33 22 V33 H11 Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><rect x="19" y="24" width="6" height="9" fill="#fff"/></svg>
+    <strong style="font-size:19px">Ourr Home &amp; Appliances</strong>
+  </span>
+  <p style="margin:8px 0 12px;color:#fff;font-weight:600">Ourr Home in Every Home</p>
+  <div style="display:flex;flex-wrap:wrap;gap:0 20px"><a href="Stores.dc.html">Our stores</a><a href="#delivery">Delivery</a><a href="#financing">Financing</a><a href="#contact">Contact us</a></div>
+  <div style="border-top:1px solid #2B3B5C;margin-top:14px;padding-top:14px;display:flex;flex-direction:column;gap:10px;font-size:14px;align-items:flex-start">
+    <span>© 2026 Ourr Home &amp; Appliances. Sample products and prices.</span>
+    <span style="background:#fff;color:#0F1B33;font-weight:800;padding:6px 14px;border-radius:999px">Prototype – concept only</span>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2500}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { img: 0, store: 'vaughan', delivery: true, install: false, haul: true, plan: false, postal: 'M9C 1B8', postalChecked: true, reserved: false };
+  }
+
+  renderVals() {
+    const s = this.state;
+    const money = (n) => '$' + n.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const T = '';
+    const imgs = [
+      { src: T + 'img/fridge-top-white.svg', label: 'Front view', alt: 'Frigidaire 28.5-inch top-freezer refrigerator, white, front view' },
+      { src: T + 'img/fridge-top-white-open.svg', label: 'Interior view with door open', alt: 'The same refrigerator with the fridge door open' },
+      { src: T + 'img/fridge-top-white-dims.svg', label: 'Dimensions', alt: 'Dimensions: 28.5 inches wide, 66.5 inches high, 31.5 inches deep' }
+    ];
+    const thumbs = imgs.map((m, i) => ({ src: m.src, label: m.label, on: s.img === i, border: s.img === i ? '#1E4DB7' : '#D9DEE6', pick: () => this.setState({ img: i }) }));
+
+    const stockMap = {
+      vaughan: { name: 'Vaughan', text: 'In stock · 6 available', color: '#0A6B3B', radius: '50%' },
+      oakville: { name: 'Oakville', text: 'In stock · 3 available', color: '#0A6B3B', radius: '50%' },
+      bramh: { name: 'Brampton (Heritage Rd)', text: 'In stock · 4 available', color: '#0A6B3B', radius: '50%' },
+      stoneycreek: { name: 'Stoney Creek', text: 'Low stock · 1 left', color: '#8A4B00', radius: '0' },
+      etobicoke: { name: 'Etobicoke', text: 'Ships to store in 2 days', color: '#8A4B00', radius: '0' }
+    };
+    const st = stockMap[s.store];
+
+    const defs = [
+      { id: 'delivery', title: 'Delivery', desc: 'By our own crew', price: 59.99 },
+      { id: 'install', title: 'Installation', desc: 'Placement, levelling, final check', price: 49.99 },
+      { id: 'haul', title: 'Haul-away of old unit', desc: 'We remove and recycle it', price: 39.99 },
+      { id: 'plan', title: '3-year protection plan', desc: 'Extended coverage', price: 89.99 }
+    ];
+    const addons = defs.map((d) => ({
+      title: d.title, desc: d.desc, priceText: money(d.price), on: s[d.id],
+      border: s[d.id] ? '#1E4DB7' : '#D9DEE6', bg: s[d.id] ? '#EEF3FD' : '#FFFFFF',
+      toggle: () => this.setState({ [d.id]: !this.state[d.id] })
+    }));
+    let sum = 729.99;
+    defs.forEach((d) => { if (s[d.id]) sum += d.price; });
+    sum = Math.round(sum * 100) / 100;
+
+    const pc = s.postal.trim().toUpperCase();
+    const valid = /^[A-Z]\d[A-Z][ -]?\d[A-Z]\d$/.test(pc);
+    const ont = valid && 'KLMNP'.indexOf(pc[0]) >= 0;
+    let postalMsg = 'Enter your postal code to see delivery dates.';
+    let postalColor = '#556070';
+    if (s.postalChecked && pc) {
+      if (!valid) { postalMsg = 'That postal code does not look right. Try M9C 1B8.'; postalColor = '#A50D25'; }
+      else if (!ont) { postalMsg = 'We deliver in Ontario only. Pick up in store instead.'; postalColor = '#8A4B00'; }
+      else { postalMsg = 'Delivery available to ' + pc + '. Earliest: Saturday, Oct 24.'; postalColor = '#0A6B3B'; }
+    }
+
+    const specs = [
+      { k: 'Brand', v: 'Frigidaire' }, { k: 'Model', v: 'ARTX2314TW' }, { k: 'Type', v: 'Top freezer' },
+      { k: 'Capacity', v: '18.3 cu. ft.' }, { k: 'Width', v: '28.5 in.' }, { k: 'Height', v: '66.5 in.' },
+      { k: 'Depth', v: '31.5 in.' }, { k: 'Finish', v: 'White' }, { k: 'Shelves', v: 'Adjustable glass' }, { k: 'Warranty', v: '1 year, manufacturer' }
+    ];
+
+    return {
+      mainSrc: imgs[s.img].src, mainAlt: imgs[s.img].alt, thumbs,
+      store: s.store, setStore: (e) => this.setState({ store: e.target.value }),
+      stockText: st.text, stockColor: st.color, stockRadius: st.radius, storeName: st.name,
+      addons, total: money(sum), monthly: money(Math.round((sum / 24) * 100) / 100),
+      postal: s.postal, setPostal: (e) => this.setState({ postal: e.target.value, postalChecked: false }),
+      checkPostal: () => this.setState({ postalChecked: true }), postalMsg, postalColor,
+      reserved: s.reserved, reserve: () => this.setState({ reserved: true }), specs
+    };
+  }
+}
+</script>
+</body>
+</html>

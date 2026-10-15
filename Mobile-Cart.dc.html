@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<title>Ourr Home – Mobile cart</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;color:#0F1B33;background:#F4F6F9;-webkit-font-smoothing:antialiased;line-height:1.45}
+*{box-sizing:border-box}
+a{color:#1E4DB7;text-decoration:none}a:hover{color:#163A8C;text-decoration:underline}
+img{display:block;max-width:100%}
+button,input,select{font-family:inherit;font-size:16px}
+:focus-visible{outline:3px solid #F5A524;outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 22px;border-radius:12px;font-weight:700;font-size:17px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:background .15s,box-shadow .15s,transform .15s,color .15s}
+.btn:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 8px 18px rgba(15,27,51,.18)}
+.btn-red{background:#C8102E;color:#fff}.btn-red:hover{background:#A50D25;color:#fff}
+.btn-blue{background:#1E4DB7;color:#fff}.btn-blue:hover{background:#163A8C;color:#fff}
+.btn-ghost{background:#fff;color:#1E4DB7;border-color:#1E4DB7}.btn-ghost:hover{background:#EEF3FD;color:#163A8C}
+.card{background:#fff;border:1px solid #D9DEE6;border-radius:16px}
+.ibtn{width:48px;height:48px;border:0;background:transparent;border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#0F1B33;position:relative}
+.ibtn:hover{background:#EEF3FD;text-decoration:none}
+.field{width:100%;min-height:52px;padding:0 14px;border:1.5px solid #8A94A6;border-radius:10px;background:#fff;color:#0F1B33}
+.link-btn{background:none;border:0;color:#1E4DB7;font-weight:700;min-height:44px;padding:0 8px;cursor:pointer;text-decoration:underline}
+.foot a{color:#D6E0F7;display:inline-flex;align-items:center;min-height:44px}.foot a:hover{color:#fff}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sugg{display:flex;align-items:center;gap:12px;min-height:64px;padding:10px 12px;border:1.5px dashed #8A94A6;border-radius:12px;background:#fff}
+</style>
+</helmet>
+
+<div id="page" style="max-width:430px;margin:0 auto;background:#F4F6F9">
+<header style="position:sticky;top:0;z-index:60;background:#fff;box-shadow:0 2px 12px rgba(15,27,51,.10)">
+  <div style="padding:6px 8px 4px 8px;display:flex;align-items:center;gap:2px">
+    <button class="ibtn" type="button" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F1B33" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a href="Mobile-Home.dc.html" aria-label="Ourr Home and Appliances, home" style="flex:1;display:flex;align-items:center;gap:10px;color:#0F1B33;text-decoration:none;min-height:48px">
+      <svg width="36" height="36" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="11" fill="#C8102E"/><path d="M11 22 L22 12 L33 22 V33 H11 Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><rect x="19" y="24" width="6" height="9" fill="#fff"/></svg>
+      <span style="display:flex;flex-direction:column;line-height:1"><span style="font-size:22px;font-weight:800">Ourr</span><span style="font-size:9px;font-weight:700;letter-spacing:.12em;color:#556070;margin-top:2px">HOME &amp; APPLIANCES</span></span>
+    </a>
+    <a class="ibtn" href="Mobile-Cart.dc.html" aria-label="Cart, 1 item" aria-current="page"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2.5 3.5h3l2.4 11.5h10.2l2-8.5H6.4"/></svg><span aria-hidden="true" style="position:absolute;top:4px;right:2px;background:#C8102E;color:#fff;min-width:20px;height:20px;border-radius:10px;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">1</span></a>
+  </div>
+  <div style="padding:2px 16px 10px">
+    <div style="display:flex;border:2px solid #1E4DB7;border-radius:12px;overflow:hidden;background:#fff">
+      <label class="sr" for="q">Search appliances</label>
+      <input id="q" type="search" placeholder="Search by model, brand or keyword" style="flex:1;min-width:0;border:0;min-height:46px;padding:0 14px;outline-offset:-3px">
+      <button type="button" aria-label="Search" style="border:0;background:#1E4DB7;width:52px;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg></button>
+    </div>
+  </div>
+  <a href="Stores.dc.html" aria-label="My store: Etobicoke. Change store" style="display:flex;align-items:center;gap:10px;min-height:48px;padding:0 16px;background:#1E4DB7;color:#fff;font-weight:600">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+    <span style="flex:1">My store: <strong>Etobicoke</strong></span>
+    <span style="text-decoration:underline">Change</span>
+  </a>
+</header>
+
+<main style="padding:16px 16px 8px">
+  <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px">
+    <h1 style="margin:0;font-size:30px;font-weight:800;letter-spacing:-.02em">Your cart</h1>
+    <span style="color:#334155">1 item</span>
+  </div>
+
+  <section class="card" style="padding:16px">
+    <div style="display:flex;gap:14px">
+      <a href="Mobile-Product.dc.html" style="flex:0 0 96px;height:128px;background:#F4F6F9;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:6px"><img src="img/fridge-top-white.svg" alt="Frigidaire 28.5-inch top-freezer refrigerator, white" style="height:100%;width:auto"></a>
+      <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
+        <span style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#A50D25">CLEARANCE · FRIGIDAIRE</span>
+        <a href="Mobile-Product.dc.html" style="font-size:17px;font-weight:700;color:#0F1B33;line-height:1.25">28.5" Top-Freezer Refrigerator</a>
+        <span style="font-size:13px;color:#556070">Model ARTX2314TW · White</span>
+        <span style="display:flex;align-items:baseline;gap:8px;margin-top:4px"><span style="font-size:24px;font-weight:800;color:#C8102E">$729.99</span><span style="font-size:14px;color:#556070;text-decoration:line-through">$999.99</span></span>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;margin-top:10px">
+      <span style="display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:1.5px solid #8A94A6;border-radius:10px;font-weight:700">Qty 1</span>
+      <button class="link-btn" type="button">Remove</button>
+      <button class="link-btn" type="button">Save for later</button>
+    </div>
+
+    <sc-if value="{{ hasOn }}" hint-placeholder-val="{{ true }}">
+    <div style="margin-top:14px">
+      <h2 style="margin:0 0 4px;font-size:16px;font-weight:800">Services for this item</h2>
+      <sc-for list="{{ onList }}" as="a" hint-placeholder-count="2">
+        <div style="display:flex;align-items:center;gap:10px;min-height:64px;padding:8px 0;border-top:1px solid #E8EBF0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E4DB7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 22px"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+          <span style="flex:1;display:flex;flex-direction:column;line-height:1.25;min-width:0"><strong style="font-size:15px">{{ a.title }}</strong><button class="link-btn" type="button" aria-label="Remove {{ a.title }}" onClick="{{ a.toggle }}" style="align-self:flex-start;padding:0;min-height:44px;font-size:14px;text-align:left">Remove</button></span>
+          <strong>{{ a.priceText }}</strong>
+        </div>
+      </sc-for>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ hasOff }}" hint-placeholder-val="{{ true }}">
+    <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+      <h2 style="margin:0;font-size:16px;font-weight:800">Add to this item</h2>
+      <sc-for list="{{ offList }}" as="a" hint-placeholder-count="2">
+        <div class="sugg">
+          <span style="flex:1;display:flex;flex-direction:column;line-height:1.25"><strong style="font-size:15px">{{ a.title }}</strong><span style="font-size:13px;color:#556070">{{ a.priceText }}</span></span>
+          <button class="btn btn-ghost" type="button" aria-label="Add {{ a.title }}" onClick="{{ a.toggle }}" style="min-height:44px;padding:0 18px">Add</button>
+        </div>
+      </sc-for>
+    </div>
+    </sc-if>
+  </section>
+
+  <section class="card" style="padding:16px;margin-top:14px">
+    <h2 style="margin:0 0 10px;font-size:18px;font-weight:800">Promo code</h2>
+    <sc-if value="{{ promoOn }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;background:#E7F4EC;border-radius:12px;padding:10px 12px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A6B3B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        <span style="flex:1 1 150px;line-height:1.3;color:#0B4F2B"><strong>OPENBOX10 applied</strong><br><span style="font-size:13px">10% off open-box and clearance</span></span>
+        <strong style="color:#0B4F2B">{{ discountText }}</strong>
+        <button class="link-btn" type="button" onClick="{{ removePromo }}">Remove</button>
+      </div>
+    </sc-if>
+    <sc-if value="{{ promoOff }}" hint-placeholder-val="{{ false }}">
+      <label for="promo" style="font-weight:600;font-size:15px;display:block;margin-bottom:6px">Enter a code</label>
+      <div style="display:flex;gap:10px">
+        <input id="promo" class="field" type="text" name="promo" value="{{ code }}" onChange="{{ setCode }}" placeholder="OPENBOX10" style="text-transform:uppercase;flex:1;min-width:0">
+        <button class="btn btn-blue" type="button" onClick="{{ applyPromo }}" style="padding:0 20px">Apply</button>
+      </div>
+    </sc-if>
+    <sc-if value="{{ hasPromoMsg }}" hint-placeholder-val="{{ false }}"><p role="status" style="margin:10px 0 0;color:#A50D25;font-weight:600">{{ promoMsg }}</p></sc-if>
+  </section>
+
+  <section class="card" style="padding:18px 16px;margin-top:14px;display:flex;flex-direction:column;gap:12px" aria-label="Order summary">
+    <h2 style="margin:0;font-size:20px;font-weight:800">Order summary</h2>
+    <div style="display:flex;justify-content:space-between;gap:12px"><span>Item (1)</span><strong>$729.99</strong></div>
+    <sc-for list="{{ onList }}" as="a" hint-placeholder-count="2">
+      <div style="display:flex;justify-content:space-between;gap:12px"><span>{{ a.line }}</span><strong>{{ a.priceText }}</strong></div>
+    </sc-for>
+    <sc-if value="{{ promoOn }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;justify-content:space-between;gap:12px;color:#0B4F2B"><span>Promo OPENBOX10 (10% off)</span><strong>{{ discountText }}</strong></div>
+    </sc-if>
+    <div style="display:flex;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid #D9DEE6"><span>Subtotal</span><strong>{{ subtotal }}</strong></div>
+    <div style="display:flex;justify-content:space-between;gap:12px"><span>HST (13%)</span><strong>{{ hst }}</strong></div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px;border-top:2px solid #0F1B33"><span style="font-size:18px;font-weight:800">Total</span><span style="font-size:30px;font-weight:800">{{ total }}</span></div>
+    <div style="display:flex;align-items:center;gap:10px;background:#EEF3FD;border-radius:12px;padding:10px 12px;font-size:14px;color:#334155"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E4DB7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 22px"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg><span>Or from <strong>{{ monthly }}/month</strong> for 24 months on approved credit</span></div>
+    <a class="btn btn-ghost" href="Mobile-Home.dc.html" style="width:100%">Continue shopping</a>
+  </section>
+</main>
+
+<div style="position:sticky;bottom:0;z-index:50;background:#fff;border-top:1px solid #D9DEE6;box-shadow:0 -8px 22px rgba(15,27,51,.14);padding:10px 16px;display:flex;align-items:center;gap:14px;margin-top:16px">
+  <div style="line-height:1.15"><div style="font-size:13px;color:#556070">Total with HST</div><div style="font-size:24px;font-weight:800">{{ total }}</div></div>
+  <a class="btn btn-red" href="Checkout.dc.html" style="flex:1">Checkout</a>
+</div>
+
+<footer class="foot" style="background:#0F1B33;color:#D6E0F7;padding:28px 16px 24px">
+  <span style="display:flex;align-items:center;gap:12px;color:#fff">
+    <svg width="34" height="34" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="11" fill="#C8102E"/><path d="M11 22 L22 12 L33 22 V33 H11 Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><rect x="19" y="24" width="6" height="9" fill="#fff"/></svg>
+    <strong style="font-size:19px">Ourr Home &amp; Appliances</strong>
+  </span>
+  <p style="margin:8px 0 12px;color:#fff;font-weight:600">Ourr Home in Every Home</p>
+  <div style="display:flex;flex-wrap:wrap;gap:0 20px"><a href="Stores.dc.html">Our stores</a><a href="#delivery">Delivery</a><a href="#financing">Financing</a><a href="#contact">Contact us</a></div>
+  <div style="border-top:1px solid #2B3B5C;margin-top:14px;padding-top:14px;display:flex;flex-direction:column;gap:10px;font-size:14px;align-items:flex-start">
+    <span>© 2026 Ourr Home &amp; Appliances. Sample products and prices.</span>
+    <span style="background:#fff;color:#0F1B33;font-weight:800;padding:6px 14px;border-radius:999px">Prototype – concept only</span>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { delivery: true, haul: true, install: false, plan: false, promo: true, code: '', promoMsg: '' };
+  }
+
+  renderVals() {
+    const s = this.state;
+    const r2 = (n) => Math.round(n * 100) / 100;
+    const money = (n) => '$' + n.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const ITEM = 729.99;
+    const defs = [
+      { id: 'delivery', title: 'Delivery', line: 'Delivery fee', price: 59.99 },
+      { id: 'haul', title: 'Haul-away of old unit', line: 'Haul-away of old unit', price: 39.99 },
+      { id: 'install', title: 'Installation', line: 'Installation', price: 49.99 },
+      { id: 'plan', title: '3-year protection plan', line: '3-year protection plan', price: 89.99 }
+    ].map((d) => ({
+      id: d.id, title: d.title, line: d.line, price: d.price, on: s[d.id], priceText: money(d.price),
+      toggle: () => this.setState({ [d.id]: !this.state[d.id] })
+    }));
+    const onList = defs.filter((d) => d.on);
+    const offList = defs.filter((d) => !d.on);
+    const services = onList.reduce((t, d) => t + d.price, 0);
+    const disc = s.promo ? r2(ITEM * 0.10) : 0;
+    const sub = r2(ITEM + services - disc);
+    const tax = r2(sub * 0.13);
+    const total = r2(sub + tax);
+
+    return {
+      onList, offList, hasOn: onList.length > 0, hasOff: offList.length > 0,
+      promoOn: s.promo, promoOff: !s.promo, code: s.code, hasPromoMsg: !!s.promoMsg, promoMsg: s.promoMsg,
+      setCode: (e) => this.setState({ code: e.target.value, promoMsg: '' }),
+      applyPromo: () => {
+        if (this.state.code.trim().toUpperCase() === 'OPENBOX10') this.setState({ promo: true, promoMsg: '', code: '' });
+        else this.setState({ promoMsg: 'That code is not valid or has expired.' });
+      },
+      removePromo: () => this.setState({ promo: false }),
+      discountText: '−' + money(disc),
+      subtotal: money(sub), hst: money(tax), total: money(total),
+      monthly: money(r2(total / 24))
+    };
+  }
+}
+</script>
+</body>
+</html>

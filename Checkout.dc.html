@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<title>Ourr Home – Checkout</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;color:#0F1B33;background:#F4F6F9;-webkit-font-smoothing:antialiased;line-height:1.45}
+*{box-sizing:border-box}
+a{color:#1E4DB7;text-decoration:none}a:hover{color:#163A8C;text-decoration:underline}
+img{display:block;max-width:100%}
+button,input,select{font-family:inherit;font-size:16px}
+:focus-visible{outline:3px solid #F5A524;outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:12px;font-weight:700;font-size:17px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:background .15s,box-shadow .15s,transform .15s,color .15s}
+.btn:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 8px 18px rgba(15,27,51,.18)}
+.btn-red{background:#C8102E;color:#fff}.btn-red:hover{background:#A50D25;color:#fff}
+.btn-blue{background:#1E4DB7;color:#fff}.btn-blue:hover{background:#163A8C;color:#fff}
+.btn-ghost{background:#fff;color:#1E4DB7;border-color:#1E4DB7}.btn-ghost:hover{background:#EEF3FD;color:#163A8C}
+.card{background:#fff;border:1px solid #D9DEE6;border-radius:16px}
+.util{color:#D6E0F7;font-size:14px;min-height:40px;display:inline-flex;align-items:center}.util:hover{color:#fff}
+.navl{color:#fff;font-weight:600;font-size:16px;padding:0 16px;min-height:52px;display:flex;align-items:center;white-space:nowrap;transition:background .15s}
+.navl:hover{background:rgba(255,255,255,.16);color:#fff;text-decoration:none}
+.pill{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 14px;border:1.5px solid #D9DEE6;border-radius:12px;color:#0F1B33;background:#fff;transition:border-color .15s,background .15s}
+.pill:hover{border-color:#1E4DB7;background:#EEF3FD;color:#0F1B33;text-decoration:none}
+.sbtn{border:0;background:#1E4DB7;color:#fff;width:56px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s}.sbtn:hover{background:#163A8C}
+.field{width:100%;min-height:52px;padding:0 14px;border:1.5px solid #8A94A6;border-radius:10px;background:#fff;color:#0F1B33}
+.field:hover{border-color:#1E4DB7}
+.foot a{color:#D6E0F7;display:inline-flex;align-items:center;min-height:32px}.foot a:hover{color:#fff}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.lbl{font-weight:600;font-size:15px}
+.slot{width:100%;min-height:64px;border-radius:12px;padding:8px 10px;cursor:pointer;text-align:center;line-height:1.25;transition:background .15s,border-color .15s,transform .15s}
+.slot:hover:enabled{border-color:#1E4DB7 !important;background:#EEF3FD !important;transform:translateY(-1px)}
+.opt{display:flex;align-items:center;gap:14px;min-height:60px;padding:10px 16px;border-radius:12px;cursor:pointer;transition:background .15s,border-color .15s}
+.opt:hover{background:#EEF3FD;border-color:#1E4DB7 !important}
+</style>
+</helmet>
+
+<div id="page">
+<div style="background:#0F1B33;color:#fff;font-size:14px">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;min-height:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 24px">
+    <span>Free delivery over $999 across the GTA and Hamilton area</span>
+    <div style="display:flex;flex-wrap:wrap;gap:0 24px">
+      <a class="util" href="Stores.dc.html">Find a store</a>
+      <a class="util" href="#financing">Financing</a>
+      <a class="util" href="#help">Help</a>
+    </div>
+  </div>
+</div>
+
+<header style="position:sticky;top:0;z-index:60;background:#fff;box-shadow:0 2px 14px rgba(15,27,51,.10)">
+  <div style="max-width:1280px;margin:0 auto;padding:12px 32px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px">
+    <a href="Main.dc.html" aria-label="Ourr Home and Appliances, home" style="display:flex;align-items:center;gap:12px;flex:0 0 auto;color:#0F1B33;text-decoration:none">
+      <svg width="46" height="46" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="11" fill="#C8102E"/><path d="M11 22 L22 12 L33 22 V33 H11 Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><rect x="19" y="24" width="6" height="9" fill="#fff"/></svg>
+      <span style="display:flex;flex-direction:column;line-height:1"><span style="font-size:28px;font-weight:800;letter-spacing:-.01em">Ourr</span><span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#556070;margin-top:3px">HOME &amp; APPLIANCES</span></span>
+    </a>
+    <div style="flex:1 1 320px;max-width:620px;display:flex;border:2px solid #1E4DB7;border-radius:12px;overflow:hidden;background:#fff">
+      <label class="sr" for="q">Search appliances</label>
+      <input id="q" type="search" placeholder="Search by model, brand or keyword" style="flex:1;min-width:0;border:0;min-height:48px;padding:0 16px;outline-offset:-3px">
+      <button class="sbtn" type="button" aria-label="Search"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg></button>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-left:auto">
+      <a class="pill" href="Stores.dc.html" aria-label="My store: Etobicoke. Change store">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        <span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:12px;color:#556070">My store:</span><span style="font-weight:700;font-size:16px">Etobicoke</span></span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#556070" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+      <a class="pill" href="#account" style="font-weight:600">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F1B33" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/></svg>
+        Sign in
+      </a>
+      <a class="pill" href="Cart.dc.html" aria-label="Cart, 1 item" style="font-weight:700">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2.5 3.5h3l2.4 11.5h10.2l2-8.5H6.4"/></svg>
+        Cart
+        <span style="background:#C8102E;color:#fff;min-width:24px;height:24px;border-radius:12px;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center">1</span>
+      </a>
+    </div>
+  </div>
+  <nav aria-label="Main" style="background:#1E4DB7">
+    <div style="max-width:1280px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;align-items:center">
+      <a class="navl" href="Category.dc.html">Refrigerators</a>
+      <a class="navl" href="#ranges">Ranges</a>
+      <a class="navl" href="#dishwashers">Dishwashers</a>
+      <a class="navl" href="#laundry">Washers &amp; Dryers</a>
+      <a class="navl" href="#ovens">Wall Ovens</a>
+      <a class="navl" href="#microwaves">Microwaves</a>
+      <a class="navl" href="Category.dc.html" style="gap:8px">Open Box &amp; Clearance <span style="background:#C8102E;color:#fff;font-size:12px;font-weight:800;padding:2px 8px;border-radius:999px">SALE</span></a>
+      <a class="navl" href="Main.dc.html#brands" style="margin-left:auto">Brands</a>
+      <a class="navl" href="Stores.dc.html">Stores</a>
+    </div>
+  </nav>
+</header>
+
+<main style="max-width:1280px;margin:0 auto;padding:28px 32px 80px">
+  <nav aria-label="Breadcrumb" style="font-size:15px;color:#556070;display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-height:44px">
+    <a href="Cart.dc.html">Cart</a><span aria-hidden="true">/</span><span style="color:#0F1B33;font-weight:600">Checkout</span>
+  </nav>
+  <h1 style="margin:4px 0 24px;font-size:40px;font-weight:800;letter-spacing:-.02em">Checkout</h1>
+
+  <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start">
+    <!-- LEFT: form -->
+    <div style="flex:1 1 640px;min-width:0;display:flex;flex-direction:column;gap:20px">
+
+      <section class="card" style="padding:26px 28px">
+        <h2 style="margin:0 0 18px;font-size:22px;font-weight:800;display:flex;align-items:center;gap:12px"><span aria-hidden="true" style="width:34px;height:34px;border-radius:50%;background:#1E4DB7;color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px">1</span>Contact</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:16px">
+          <div style="display:flex;flex-direction:column;gap:6px"><label class="lbl" for="email">Email</label><input id="email" class="field" type="email" name="email" value="{{ v.email }}" onChange="{{ setField }}" autocomplete="email"></div>
+          <div style="display:flex;flex-direction:column;gap:6px"><label class="lbl" for="phone">Mobile phone</label><input id="phone" class="field" type="tel" name="phone" value="{{ v.phone }}" onChange="{{ setField }}" autocomplete="tel"></div>
+        </div>
+        <p style="margin:12px 0 0;font-size:14px;color:#556070">We text you the day before delivery.</p>
+      </section>
+
+      <section class="card" style="padding:26px 28px">
+        <h2 style="margin:0 0 18px;font-size:22px;font-weight:800;display:flex;align-items:center;gap:12px"><span aria-hidden="true" style="width:34px;height:34px;border-radius:50%;background:#1E4DB7;color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px">2</span>Delivery address</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:16px">
+          <div style="display:flex;flex-direction:column;gap:6px"><label class="lbl" for="first">First name</label><input id="first" class="field" type="text" name="first" value="{{ v.first }}" onChange="{{ setField }}" autocomplete="given-name"></div>
+          <div style="display:flex;flex-direction:column;gap:6px"><label class="lbl" for="last">Last name</label><input id="last" class="field" type="text" name="last" value="{{ v.last }}" onChange="{{ setField }}" autocomplete="family-name"></div>
+          <div style="display:flex;flex-direction:column;gap:6px;grid-column:1 / -1"><label class="lbl" for="addr">Street address</label><input id="addr" class="field" type="text" name="addr" value="{{ v.addr }}" onChange="{{ setField }}" autocomplete="address-line1"></div>
+          <div style="display:flex;flex-direction:column;gap:6px"><label class="lbl" for="unit">Apt, suite or buzzer (optional)</label><input id="unit" class="field" type="text" name="unit" value="{{ v.unit }}" onChange="{{ setField }}" autocomplete="address-line2"></div>
+          <div style="display:flex;flex-direction:column;gap:6px"><label class="lbl" for="city">City</label><input id="city" class="field" type="text" name="city" value="{{ v.city }}" onChange="{{ setField }}" autocomplete="address-level2"></div>
+          <div style="display:flex;flex-direction:column;gap:6px"><label class="lbl" for="prov">Province</label><select id="prov" class="field"><option>Ontario</option></select></div>
+          <div style="display:flex;flex-direction:column;gap:6px"><label class="lbl" for="pcode">Postal code</label><input id="pcode" class="field" type="text" name="pcode" value="{{ v.pcode }}" onChange="{{ setField }}" autocomplete="postal-code"></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:16px;background:#E7F4EC;color:#0B4F2B;border-radius:12px;padding:12px 16px;font-weight:600">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A6B3B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 22px"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+          We deliver to this postal code from our Vaughan store.
+        </div>
+      </section>
+
+      <section class="card" style="padding:26px 28px">
+        <fieldset style="border:0;margin:0;padding:0">
+          <legend style="padding:0;margin:0 0 6px;font-size:22px;font-weight:800;display:flex;align-items:center;gap:12px;float:left;width:100%"><span aria-hidden="true" style="width:34px;height:34px;border-radius:50%;background:#1E4DB7;color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px">3</span>Pick a delivery date</legend>
+          <div style="clear:both"></div>
+          <p style="margin:0 0 16px;font-size:15px;color:#556070">Choose a 4-hour window. Someone must be home to receive the delivery.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr));gap:14px">
+            <sc-for list="{{ days }}" as="d" hint-placeholder-count="5">
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <div style="text-align:center;line-height:1.2;padding-bottom:4px"><div style="font-weight:800;font-size:17px">{{ d.label }}</div><div style="font-size:14px;color:#556070">{{ d.date }}</div></div>
+                <button class="slot" type="button" disabled="{{ d.s1.full }}" aria-pressed="{{ d.s1.on }}" onClick="{{ d.s1.pick }}" style="border:2px solid {{ d.s1.border }};background:{{ d.s1.bg }};color:{{ d.s1.color }}"><strong>Morning</strong><br><span style="font-size:13px">{{ d.s1.sub }}</span></button>
+                <button class="slot" type="button" disabled="{{ d.s2.full }}" aria-pressed="{{ d.s2.on }}" onClick="{{ d.s2.pick }}" style="border:2px solid {{ d.s2.border }};background:{{ d.s2.bg }};color:{{ d.s2.color }}"><strong>Afternoon</strong><br><span style="font-size:13px">{{ d.s2.sub }}</span></button>
+                <button class="slot" type="button" disabled="{{ d.s3.full }}" aria-pressed="{{ d.s3.on }}" onClick="{{ d.s3.pick }}" style="border:2px solid {{ d.s3.border }};background:{{ d.s3.bg }};color:{{ d.s3.color }}"><strong>Evening</strong><br><span style="font-size:13px">{{ d.s3.sub }}</span></button>
+              </div>
+            </sc-for>
+          </div>
+          <p role="status" style="margin:16px 0 0;font-weight:700">Selected: {{ slotText }}</p>
+        </fieldset>
+      </section>
+
+      <section class="card" style="padding:26px 28px">
+        <fieldset style="border:0;margin:0;padding:0">
+          <legend style="padding:0;margin:0 0 16px;font-size:22px;font-weight:800;display:flex;align-items:center;gap:12px;float:left;width:100%"><span aria-hidden="true" style="width:34px;height:34px;border-radius:50%;background:#1E4DB7;color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px">4</span>Payment</legend>
+          <div style="clear:both"></div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ payOpts }}" as="p" hint-placeholder-count="2">
+              <label class="opt" style="border:2px solid {{ p.border }};background:{{ p.bg }}">
+                <input type="radio" name="pay" checked="{{ p.on }}" onChange="{{ p.pick }}" style="width:22px;height:22px;accent-color:#1E4DB7;flex:0 0 22px">
+                <span style="flex:1;display:flex;flex-direction:column;line-height:1.3"><strong>{{ p.title }}</strong><span style="font-size:14px;color:#556070">{{ p.desc }}</span></span>
+              </label>
+            </sc-for>
+          </div>
+          <sc-if value="{{ payCard }}" hint-placeholder-val="{{ true }}">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:16px;margin-top:20px">
+              <div style="display:flex;flex-direction:column;gap:6px;grid-column:1 / -1"><label class="lbl" for="cardnum">Card number</label><input id="cardnum" class="field" type="text" inputmode="numeric" name="cardnum" value="{{ v.cardnum }}" onChange="{{ setField }}" placeholder="0000 0000 0000 0000" autocomplete="cc-number"></div>
+              <div style="display:flex;flex-direction:column;gap:6px;grid-column:1 / -1"><label class="lbl" for="cardname">Name on card</label><input id="cardname" class="field" type="text" name="cardname" value="{{ v.cardname }}" onChange="{{ setField }}" autocomplete="cc-name"></div>
+              <div style="display:flex;flex-direction:column;gap:6px"><label class="lbl" for="exp">Expiry (MM/YY)</label><input id="exp" class="field" type="text" name="exp" value="{{ v.exp }}" onChange="{{ setField }}" placeholder="MM/YY" autocomplete="cc-exp"></div>
+              <div style="display:flex;flex-direction:column;gap:6px"><label class="lbl" for="cvc">Security code</label><input id="cvc" class="field" type="text" inputmode="numeric" name="cvc" value="{{ v.cvc }}" onChange="{{ setField }}" placeholder="3 digits" autocomplete="cc-csc"></div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ payFin }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:18px 0 0;background:#EEF3FD;border-radius:12px;padding:14px 16px;color:#334155">After you place your order, we send a short credit application to your email. Delivery is booked once it is approved.</p>
+          </sc-if>
+        </fieldset>
+      </section>
+    </div>
+
+    <!-- RIGHT: summary -->
+    <aside aria-label="Order summary" style="flex:1 1 360px;max-width:440px;min-width:300px;position:sticky;top:150px">
+      <section class="card" style="padding:26px 28px;display:flex;flex-direction:column;gap:14px">
+        <h2 style="margin:0;font-size:24px;font-weight:800">Order summary</h2>
+        <div style="display:flex;gap:16px;align-items:center;padding-bottom:14px;border-bottom:1px solid #D9DEE6">
+          <div style="flex:0 0 84px;height:100px;background:#F4F6F9;border-radius:10px;display:flex;align-items:center;justify-content:center;padding:6px"><img src="img/fridge-top-white.svg" alt="Frigidaire top-freezer refrigerator" style="height:100%;width:auto"></div>
+          <div style="line-height:1.3"><strong>Frigidaire 28.5" Top-Freezer Refrigerator</strong><div style="font-size:14px;color:#556070">Model ARTX2314TW · Qty 1</div></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;gap:12px"><span>Item (1)</span><strong>$729.99</strong></div>
+        <div style="display:flex;justify-content:space-between;gap:12px"><span>Delivery fee</span><strong>$59.99</strong></div>
+        <div style="display:flex;justify-content:space-between;gap:12px"><span>Haul-away of old unit</span><strong>$39.99</strong></div>
+        <div style="display:flex;justify-content:space-between;gap:12px;color:#0B4F2B"><span>Promo OPENBOX10 (10% off)</span><strong>−$73.00</strong></div>
+        <div style="display:flex;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px solid #D9DEE6"><span>Subtotal</span><strong>$756.97</strong></div>
+        <div style="display:flex;justify-content:space-between;gap:12px"><span>HST (13%)</span><strong>$98.41</strong></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:14px;border-top:2px solid #0F1B33"><span style="font-size:20px;font-weight:800">Total</span><span style="font-size:34px;font-weight:800">$855.38</span></div>
+        <div style="background:#F4F6F9;border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.35"><strong>Delivery:</strong> {{ slotText }}</div>
+        <a class="btn btn-red" href="Confirmation.dc.html" style="width:100%;min-height:58px;font-size:19px">Place order</a>
+        <a href="Cart.dc.html" style="text-align:center;font-weight:700;min-height:44px;display:flex;align-items:center;justify-content:center">Back to cart</a>
+        <p style="margin:0;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;color:#556070;text-align:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#556070" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure checkout. Sample order for the prototype.</p>
+      </section>
+    </aside>
+  </div>
+</main>
+
+<footer class="foot" style="background:#0F1B33;color:#D6E0F7">
+  <div style="max-width:1280px;margin:0 auto;padding:56px 32px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:32px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="display:flex;align-items:center;gap:12px;color:#fff">
+        <svg width="40" height="40" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="11" fill="#C8102E"/><path d="M11 22 L22 12 L33 22 V33 H11 Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><rect x="19" y="24" width="6" height="9" fill="#fff"/></svg>
+        <strong style="font-size:22px">Ourr Home &amp; Appliances</strong>
+      </span>
+      <span style="font-size:16px;color:#fff;font-weight:600">Ourr Home in Every Home</span>
+      <span style="font-size:15px">Family-owned appliance retailer in Ontario.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <strong style="color:#fff;margin-bottom:8px">Shop</strong>
+      <a href="Category.dc.html">Refrigerators</a><a href="#ranges">Ranges</a><a href="#dishwashers">Dishwashers</a><a href="#laundry">Washers &amp; Dryers</a><a href="#ovens">Wall Ovens</a><a href="#microwaves">Microwaves</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <strong style="color:#fff;margin-bottom:8px">Customer care</strong>
+      <a href="#delivery">Delivery &amp; haul-away</a><a href="#financing">Financing</a><a href="#returns">Returns</a><a id="help" href="#contact">Contact us</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <strong style="color:#fff;margin-bottom:8px">Our stores</strong>
+      <a href="Stores.dc.html">Etobicoke</a><a href="Stores.dc.html">Vaughan</a><a href="Stores.dc.html">Oakville</a><a href="Stores.dc.html">Stoney Creek</a><a href="Stores.dc.html">Brampton (Heritage Rd)</a><a href="Stores.dc.html">Brampton (Clarence St)</a>
+    </div>
+  </div>
+  <div style="border-top:1px solid #2B3B5C">
+    <div style="max-width:1280px;margin:0 auto;padding:20px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;font-size:14px">
+      <span>© 2026 Ourr Home &amp; Appliances. Sample products and prices.</span>
+      <span style="background:#fff;color:#0F1B33;font-weight:800;padding:6px 14px;border-radius:999px">Prototype – concept only</span>
+    </div>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1360,"height":2350}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      f: { email: 'alex.morgan@example.com', phone: '(416) 555-0123', first: 'Alex', last: 'Morgan', addr: '123 Maple Grove Dr', unit: '', city: 'Etobicoke', pcode: 'M9C 1B8', cardnum: '', cardname: '', exp: '', cvc: '' },
+      slot: 'sat-am', pay: 'card'
+    };
+  }
+
+  renderVals() {
+    const s = this.state;
+    const dayDefs = [
+      { id: 'thu', label: 'Thu', date: 'Oct 22', long: 'Thursday, October 22' },
+      { id: 'fri', label: 'Fri', date: 'Oct 23', long: 'Friday, October 23' },
+      { id: 'sat', label: 'Sat', date: 'Oct 24', long: 'Saturday, October 24' },
+      { id: 'mon', label: 'Mon', date: 'Oct 26', long: 'Monday, October 26' },
+      { id: 'tue', label: 'Tue', date: 'Oct 27', long: 'Tuesday, October 27' }
+    ];
+    const wins = [{ id: 'am', name: 'Morning', time: '8 am to 12 pm' }, { id: 'pm', name: 'Afternoon', time: '12 to 4 pm' }, { id: 'eve', name: 'Evening', time: '4 to 8 pm' }];
+    const fullSlots = ['thu-am', 'fri-eve', 'sat-eve', 'mon-pm'];
+    const mk = (d, w) => {
+      const id = d.id + '-' + w.id;
+      const full = fullSlots.includes(id);
+      const on = s.slot === id;
+      return {
+        full, on, sub: full ? 'Full' : w.time,
+        border: on ? '#1E4DB7' : '#D9DEE6', bg: full ? '#EEF0F4' : on ? '#EEF3FD' : '#FFFFFF', color: full ? '#5B6577' : '#0F1B33',
+        pick: () => this.setState({ slot: id })
+      };
+    };
+    const days = dayDefs.map((d) => ({ label: d.label, date: d.date, s1: mk(d, wins[0]), s2: mk(d, wins[1]), s3: mk(d, wins[2]) }));
+    const parts = s.slot.split('-');
+    const dd = dayDefs.find((d) => d.id === parts[0]);
+    const ww = wins.find((w) => w.id === parts[1]);
+    const slotText = dd.long + ', ' + ww.time;
+
+    const pays = [
+      { id: 'card', title: 'Credit or debit card', desc: 'Pay securely now' },
+      { id: 'fin', title: 'Financing', desc: 'Pay over time on approved credit' }
+    ];
+    const payOpts = pays.map((p) => ({
+      title: p.title, desc: p.desc, on: s.pay === p.id,
+      border: s.pay === p.id ? '#1E4DB7' : '#D9DEE6', bg: s.pay === p.id ? '#EEF3FD' : '#FFFFFF',
+      pick: () => this.setState({ pay: p.id })
+    }));
+
+    return {
+      v: s.f,
+      setField: (e) => { const n = e.target.name; const val = e.target.value; this.setState({ f: Object.assign({}, this.state.f, { [n]: val }) }); },
+      days, slotText, payOpts, payCard: s.pay === 'card', payFin: s.pay === 'fin'
+    };
+  }
+}
+</script>
+</body>
+</html>
