@@ -1,4 +1,4 @@
-(function(){try{var m=document.createElement('meta');m.name='robots';m.content='noindex,nofollow';document.head.appendChild(m);var p=location.pathname.split('/').pop();var map={'Main.dc.html':'Mobile-Home.dc.html','Product.dc.html':'Mobile-Product.dc.html','Cart.dc.html':'Mobile-Cart.dc.html'};if(map[p]&&screen.width<=700&&location.search.indexOf('desktop=1')<0){location.replace(map[p]);}}catch(e){}})();
+(function(){try{var d=document,h=d.head,m=d.createElement('meta');m.name='robots';m.content='noindex,nofollow';h.appendChild(m);var p=location.pathname.split('/').pop();if(/^Mobile-/.test(p)){var v=d.createElement('meta');v.name='viewport';v.content='width=device-width,initial-scale=1';h.appendChild(v);}var map={'Main.dc.html':'Mobile-Home.dc.html','Product.dc.html':'Mobile-Product.dc.html','Cart.dc.html':'Mobile-Cart.dc.html'};var ph=Math.min(screen.width,screen.height)<=500||/iPhone|iPod|Android.*Mobile/i.test(navigator.userAgent);if(map[p]&&ph&&location.search.indexOf('desktop=1')<0){location.replace(map[p]);}}catch(e){}})();
 /**
  * @license React
  * react.production.min.js
